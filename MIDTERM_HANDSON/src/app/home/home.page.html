@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="secondary">
+        <ion-title>
+            Student Record
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>Student Information</ion-card-title>
+            <ion-card-subtitle>Please Fill Up The Form.</ion-card-subtitle>
+        </ion-card-header>
+        <ion-list>
+            <br>
+
+            <ion-item>
+                <ion-label position="floating"> Name</ion-label>
+                <ion-input ngDefaultControl [(ngModel)]="name" type="text"> </ion-input>
+            </ion-item>
+            <br>
+
+
+            <ion-radio-group ngDefaultControl [(ngModel)]="gender">
+                <ion-item>
+                    <ion-label>Gender</ion-label>
+                    <ion-select placeholder="Select One">
+                        <ion-select-option value="Male">Male</ion-select-option>
+                        <ion-select-option value="Female">Female</ion-select-option>
+                    </ion-select>
+                </ion-item>
+            </ion-radio-group>
+
+            <ion-item>
+                <ion-label position="floating"> Email Address</ion-label>
+                <ion-input ngDefaultControl [(ngModel)]="email" type="text"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating"> Contact Number</ion-label>
+                <ion-input ngDefaultControl [(ngModel)]="contact_num" type="text"> </ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating"> Address</ion-label>
+                <ion-input ngDefaultControl [(ngModel)]="address" type="text"> </ion-input>
+            </ion-item>
+
+
+            <!--button-->
+            <br>
+            <ion-row>
+                <ion-col>
+                    <ion-button type="submit" (click)="addStudent()" color="warning" shape="round" expand="block">
+                        <ion-icon name="person-add-outline"></ion-icon>Register</ion-button>
+                </ion-col>
+            </ion-row>
+
+        </ion-list>
+    </ion-card>
+</ion-content>
